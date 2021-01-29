@@ -1,0 +1,191 @@
+/*DEFINITION DES POLICES PERSONNALISEES*/
+
+@font-face 
+{
+    font-family: 'robotobold';
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face 
+{
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face 
+{
+    font-family: 'robotoblack';
+    src: url('fonts/Roboto-Black-webfont.eot');
+    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Black-webfont.woff') format('woff'),
+         url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*MAIN PAGE ELEMENTS*/
+p
+{
+    font-family: 'robotoregular', Arial, sans-serif;
+    font-size: 0.9em;
+}
+h1
+{
+    font-family: 'robotoblack', Arial, sans-serif;
+    color: rgb(211,187,35);
+    font-size: 2.5em;
+}
+h2
+{
+    font-family: 'robotoblack', Arial, sans-serif;
+    color: rgb(151,151,175);
+    font-size: 2em;
+}
+h3
+{
+    font-family: 'robotoblack', Arial, sans-serif;
+    color: black;
+    font-size: 1.1em;
+}
+img 
+{
+    border-radius: 5px;
+}
+a.button
+{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 6, 8);
+    border-radius: 15px;
+    border-bottom: 3px rgb(211,187,35) solid;
+}
+a.button:hover
+{
+    border: white solid 1px;
+}
+
+.login_button
+{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 6, 8);
+    border-radius: 15px;
+    border-bottom: 3px rgb(211,187,35) solid;
+}
+.login_button.hover
+{
+    border: white solid 1px;
+}
+
+/*HEADER*/
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    z-index: 3;
+    background-color: white;
+}
+
+#logo
+{
+    display: flex;
+    margin-left: 100px;
+}
+
+header nav ul
+{
+    display: flex;
+    list-style: none;
+}
+header nav li
+{
+    margin-right: 10px;
+}
+header nav a
+{
+    font-family: 'robotoregular', Arial, sans-serif;
+    font-size: 1em;
+    color: black;
+    padding-top: 30px;
+    margin-right: 40px;
+    text-decoration: none;
+}
+header nav a:hover
+{
+    border-top: 3px solid rgb(211,187,35);
+}
+
+/*SECTION introduction*/
+#introduction
+{
+    background-image: url('images/billet-7.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    margin-top: 100px;
+    height: 850px;
+    padding-top: 200px;
+    
+}
+.heading_description
+{
+    text-align: center;
+}
+
+/*BILLETS*/
+.listing-item
+{
+    text-align: left;
+}
+.display-posts-listing.image-left .listing-item 
+{
+    overflow: hidden;
+    margin-bottom: 32px;
+    width: 100%;
+}
+.display-posts-listing.image-left .image 
+{
+    float: left;
+    margin: 0 16px 0 0;
+}
+.img.attachment-thumbnail.size-thumbnail.post-image 
+{
+    width: 150px;
+}
+.display-posts-listing.image-left .title 
+{
+    display: block;
+    text-decoration: none;
+}
+
+/*FOOTER*/
+footer
+{
+    background-color: rgb(0, 5, 7);
+    position: relative;
+    height: 100px;
+    color: white;
+    padding-top: 1px;
+}
+
+/*MEDIA QUERIES*/
+
