@@ -19,8 +19,8 @@
         <nav>
             <ul>
                 <li><a href="#billets">Les billets</a></li>
-                <li><a href="auteur.html">L'auteur</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="auteur.php">L'auteur</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -44,9 +44,9 @@
         </div>
         <div class="display-posts-listing image-left">
             <div class="listing-item">
-                <a class="image" href="article1.html"><img width="150" height="150" src="images/billet-1.jpg"
-                        class="attachment-thumbnail size-thumbnail post-image" alt="Billet 1" /></a>
-                <a class="title" href="article1.html">La loi primitive</a> <span class="excerpt-dash">-</span>
+                <a class="image" href="article1.php"><img width="150" height="150" src="images/billet-2.jpg"
+                        class="thumbnail" alt="Billet 1" /></a>
+                <a class="title" href="article1.php">La loi primitive</a> <span class="excerpt-dash">-</span>
                 <span class="excerpt">Un soir, que le juge présidait une réunion et que ses fils étaient absorbés par le
                     règlement d’un nouveau club athlétique,
                     le traître Manoël appelle doucement Buck, qui le suit sans défiance, convaincu qu’il s’agit d’une
@@ -57,9 +57,9 @@
                 </span>
             </div>
             <div class="listing-item">
-                <a class="image" href="article2.html"><img width="150" height="150" src="images/billet-2.jpg"
-                        class="attachment-thumbnail size-thumbnail post-image" alt="Billet 2" /></a>
-                <a class="title" href="article2.html">La loi du bâton et de la dent</a> <span class="excerpt-dash">-</span>
+                <a class="image" href="article2.php"><img width="150" height="150" src="images/billet-4.jpg"
+                        class="thumbnail" alt="Billet 2" /></a>
+                <a class="title" href="article2.php">La loi du bâton et de la dent</a> <span class="excerpt-dash">-</span>
                 <span class="excerpt">La première journée de Buck sur la grève de Dyea fut un véritable cauchemar. 
                     Toutes les heures lui apportaient une émotion ou une surprise. Brutalement arraché à sa vie paresseuse et ensoleillée, 
                     il se voyait sans transition rejeté du cœur de la civilisation au centre même de la barbarie. Ici, ni paix, ni repos, 
@@ -73,14 +73,15 @@
         </div>
     </section>
     <!--/Section content end-->
-
+    
     <!-- /footer -->
     <footer>
         <div class="heading_description">
             <p>Jean Forteroche - 25 rue d'Hauteville - 75010 Paris - Tél. 01 02 03 04 05</p>
+            <p>Information importante : Le blog de Jean Forteroche est fictif. Il a été réalisé dans le cadre d’une formation OpenClassrooms.</p>
         </div>
     </footer>
-    <!--/footer-->
+    <!--/footer end-->
 
 </body>
 
