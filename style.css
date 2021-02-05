@@ -70,10 +70,12 @@ a.button
     background-color: rgb(0, 6, 8);
     border-radius: 15px;
     border-bottom: 3px rgb(211,187,35) solid;
+    width: 100px;
 }
 a.button:hover
 {
     border: white solid 1px;
+    width: 100px;
 }
 
 .login_button
@@ -84,10 +86,35 @@ a.button:hover
     background-color: rgb(0, 6, 8);
     border-radius: 15px;
     border-bottom: 3px rgb(211,187,35) solid;
+    width: 100px;
 }
 .login_button.hover
 {
     border: white solid 1px;
+}
+fieldset
+{
+    width: 30%;
+    border: 2px solid rgb(211,187,35);
+    border-radius: 30px;
+    min-width: 300px;
+    text-align: center;
+    margin: auto;
+}
+input:required 
+{
+    font-size: 14px;
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 30px;
+    padding: 5px 5px 5px 8px;
+    width: 95%;
+}
+
+legend
+{
+    font-family: 'robotoblack', Arial, sans-serif;
+    color: rgb(211,187,35);
+    font-size: 2em;
 }
 
 /*HEADER*/
@@ -167,9 +194,11 @@ header nav a:hover
     float: left;
     margin: 0 16px 0 0;
 }
-.img.attachment-thumbnail.size-thumbnail.post-image 
+.thumbnail 
 {
-    width: 150px;
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+    object-fit: cover;
 }
 .display-posts-listing.image-left .title 
 {
