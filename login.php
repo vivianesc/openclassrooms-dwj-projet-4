@@ -11,12 +11,13 @@
 </head>
 
 <body>
-<form method="post" action="cible.php">
+<form method="post" action="administration.php">
  <p>
 <fieldset id="">
-<input type="text" name="identifiant" value="veuillez saisir votre identifiant" >
-<input type="password" name="password" value="veuillez saisir votre mot de passe">
-<input type="submit" name="submit" value="Login" class="login_button">
+<legend>LOGIN</legend>
+<p><input type="text" name="username" placeholder="Identifiant" required></p>
+<p><input type="password" name="password" placeholder="Mot de passe" required></p>
+<p><input type="submit" name="submit" value="Login" class="login_button"></p>
 </fieldset>
 </p>
 </form>
