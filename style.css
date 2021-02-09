@@ -135,7 +135,11 @@ header
 #logo
 {
     display: flex;
-    margin-left: 100px;
+    margin-left: 40px;
+}
+.logo_jeanforteroche
+{
+    height: 80px;
 }
 
 header nav ul

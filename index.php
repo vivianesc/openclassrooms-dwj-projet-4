@@ -14,7 +14,7 @@
     <!--/Header -->
     <header>
         <div id="logo">
-            <img src="images/logo.png" alt="Logo Jean Forteroche" class="logo_jeanforteroche" />
+            <img src="images/logo.jpg" alt="Logo Jean Forteroche" class="logo_jeanforteroche" />
         </div>
         <nav>
             <ul>
