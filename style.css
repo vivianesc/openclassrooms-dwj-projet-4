@@ -181,13 +181,15 @@ header nav a:hover
 /*BILLETS*/
 .listing-item
 {
-    text-align: left;
+    margin-bottom: 32px;
 }
-.display-posts-listing.image-left .listing-item 
+.excerpt
 {
     overflow: hidden;
     margin-bottom: 32px;
-    width: 100%;
+    width: 80%;
+    text-align: left;
+    height: 100px;
 }
 .display-posts-listing.image-left .image 
 {
