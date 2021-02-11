@@ -51,6 +51,7 @@ h2
     font-family: 'robotoblack', Arial, sans-serif;
     color: rgb(151,151,175);
     font-size: 2em;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white
 }
 h3
 {
@@ -117,6 +118,29 @@ legend
     font-size: 2em;
 }
 
+.cpanel
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.cpanel ul 
+{
+    display: flex;
+    list-style: none;
+}
+.cpanel li
+{
+    margin-right: 10px;
+}
+.cpanel a
+{
+    font-family: 'robotoregular', Arial, sans-serif;
+    text-decoration: none;
+}
+
 /*HEADER*/
 header
 {
@@ -142,7 +166,7 @@ header
     height: 80px;
 }
 
-header nav ul
+header nav ul 
 {
     display: flex;
     list-style: none;
@@ -175,7 +199,16 @@ header nav a:hover
     margin-top: 100px;
     height: 850px;
     padding-top: 200px;
-    
+}
+#introduction_administration
+{
+    background-image: url('images/billet-6.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    margin-top: 100px;
+    height: 850px;
+    padding-top: 200px;
 }
 .heading_description
 {
