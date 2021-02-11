@@ -51,7 +51,7 @@
                     } catch (Exception $e) {
                         die('Erreur : ' . $e->getMessage());
                     }
-                    $reponse = $bdd->query('SELECT title, content FROM billets WHERE id=1');
+                    $reponse = $bdd->query('SELECT title, content, LEFT(content, 55) FROM billets WHERE id=1');
                     while ($donnees = $reponse->fetch()) {
                         echo $donnees['title']  . '<br />' .  $donnees['content'];
                     }
