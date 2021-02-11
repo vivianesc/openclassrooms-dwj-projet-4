@@ -11,21 +11,30 @@
 </head>
 
 <body>
-<header>
-<?php
-    if (isset($_POST['username']) AND $_POST['username'] ==  "Jean" AND isset($_POST['password']) AND $_POST['password'] ==  "eden")
-    {
-        echo '<p>Bonjour Jean, vous pouvez écrire votre article</p>';
-    }
-    else {
-        echo 'Mauvais identifiant ou mot de passe !';
-    }
-    ?>
+    <!--/Header -->
+    <header>
+    </header>
+    <!--/Header end-->
 
-<p><a href="login.php">cliquez ici</a> pour revenir à la page login.php.</p>
-
-</header>
-
+    <!--/Section introduction-->
+    <section id="introduction_administration">
+        <div class="heading_description">
+            <?php
+            if (isset($_POST['username']) and $_POST['username'] ==  "Jean" and isset($_POST['password']) and $_POST['password'] ==  "eden") {
+                echo '<h2>Bonjour Jean, bienvenue dans votre éditeur de billets</h2>
+                <div class="cpanel">
+                <ul>
+                <li><a href="billet_ajouter.php" class="button">Ajouter</a></li>
+                <li><a href="billet_editer.php" class="button">Éditer</a></li>
+                <li><a href="billet_supprimer.php" class="button">Supprimer</a></li>
+                </ul>
+                </div>';
+            } else {
+                echo '<h2>Mauvais identifiant ou mot de passe !</h2>
+                <p><a href="login.php" class="login_button">Retour page login</a></p>';
+            }
+            ?>
+    </section>
+    <!--/Section introduction end -->
 </body>
-
 </html>
