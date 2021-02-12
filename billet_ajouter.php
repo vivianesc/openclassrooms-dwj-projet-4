@@ -1,4 +1,4 @@
-<form method="post" action="ajouter.php">
+<form method="post" action="billet_ajouter_cible.php">
     <p>
     <fieldset id="">
         <legend>EDITION DES BILLETS</legend>
