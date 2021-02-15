@@ -24,9 +24,8 @@
                 echo '<h2>Bonjour Jean, bienvenue dans votre éditeur de billets</h2>
                 <div class="cpanel">
                 <ul>
-                <li><a href="billet_ajouter.php" class="button">Ajouter</a></li>
-                <li><a href="billet_editer.php" class="button">Éditer</a></li>
-                <li><a href="billet_supprimer.php" class="button">Supprimer</a></li>
+                <li><a href="billet_ajouter.php" class="button">Ajouter un article</a></li>
+                <li><a href="billet_editer.php" class="button">Liste des commentaires signalés</a></li>
                 </ul>
                 </div>';
             } else {
