@@ -19,8 +19,7 @@
             die('Erreur : ' . $e->getMessage());
         }
         $reponse = $bdd->query('SELECT title, content, date FROM billets WHERE id=1');
-        while ($donnees = $reponse->fetch()) 
-        {
+        while ($donnees = $reponse->fetch()) {
         ?>
             <div class="billets">
                 <h3>
@@ -29,16 +28,17 @@
                 </h3>
 
                 <p>
-                <?php
-                // On affiche le contenu du billet
-                echo nl2br(htmlspecialchars($donnees['content']));
-                ?>
-                <br>
-                <em><a href="commentaires.php=<?php echo $donnees['id']; ?>">Commentaires</a></em>
+                    <?php
+                    // On affiche le contenu du billet
+                    echo nl2br(htmlspecialchars($donnees['content']));
+                    ?>
+                    <br>
+                    <em><a href="commentaires.php=<?php echo $donnees['id']; ?>">Commentaires</a></em>
                 </p>
             </div>
         <?php
         }
         ?>
 </body>
+
 </html>
