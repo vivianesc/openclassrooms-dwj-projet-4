@@ -10,12 +10,10 @@ catch(Exception $e){
 
 // Insertion du billet à l'aide d'une requête préparée
 
-$req=$bdd->prepare('INSERT INTO billets (title, content) VALUES(:title, :content)');
-$req->execute(array(
-'title' => $_POST['title'],
-'content' => $_POST['content'],
+$req=$bdd->prepare('INSERT INTO billets(title, content, date_creation) VALUES(?, ?, CURRENT_DATE())');
+$req->execute(array($_POST['title'], $_POST['content'],
 ));
 
 // Redirection vers la page edition d'article
-// header('Location: billet_ajouter.php');
+header('Location: billet_ajouter.php');
 ?>
