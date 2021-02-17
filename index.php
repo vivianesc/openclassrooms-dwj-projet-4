@@ -42,56 +42,45 @@
             <h2>LES BILLETS</h2>
         </div>
         <div class="display-posts-listing image-left">
-            <div class="listing-item">
-                <a class="image" href="article1.php"><img width="150" height="150" src="images/billet-2.jpg" class="thumbnail" alt="Billet 1" /></a>
-                <div class="excerpt">
-                    <?php
-                    try {
-                        $bdd = new PDO('mysql:host=localhost;dbname=jean-forteroche;charset=utf8', 'root', 'root');
-                    } catch (Exception $e) {
-                        die('Erreur : ' . $e->getMessage());
-                    }
-                    $reponse = $bdd->query('SELECT title, content, LEFT(content, 55) FROM billets WHERE id=1');
-                    while ($donnees = $reponse->fetch()) {
-                        echo $donnees['title']  . '<br />' .  $donnees['content'];
-                    }
-                    $reponse->closeCursor();
-                    ?>
-                    <a class="title" href="article1.php">Lire la suite&hellip;</a> 
-                </div>
-                <p><a href="article1.php" class="button">Lire l'article</a></p>
-            </div>
+            <?php
+            try {
+                $bdd = new PDO('mysql:host=localhost;dbname=jean-forteroche;charset=utf8', 'root', 'root');
+            } catch (Exception $e) {
+                die('Erreur : ' . $e->getMessage());
+            }
+            // On récupère les 10 derniers billets
+            $req = $bdd->query('SELECT id, title, content, DATE_FORMAT(date_creation, \'%d/%m/%Y \') AS date_creation_fr FROM billets ORDER BY date_creation DESC LIMIT 0, 10');
 
-            <div class="listing-item">
-                <a class="image" href="article2.php"><img width="150" height="150" src="images/billet-4.jpg" class="thumbnail" alt="Billet 2" /></a>
-                <div class="excerpt">
+            while ($donnees = $req->fetch()) {
+            ?>
+                <div class="listing-item">
+                    <a class="image" href="article2.php"><img width="150" height="150" src="images/billet-4.jpg" class="thumbnail" alt="Billet 2" /></a>
+                    <div class="excerpt">
+                        <?php echo htmlspecialchars($donnees['title']); ?>
+                        <em>le <?php echo $donnees['date_creation_fr']; ?></em>
+
+                        <p>
+                            <?php
+                            // On affiche le contenu du billet
+                            echo nl2br(htmlspecialchars($donnees['content']));
+                            ?>
+                            <br />
+                            <em><a href="articles.php?billet=<?php echo $donnees['id']; ?>">Commentaires</a></em>
+                        </p>
+                    </div>
                 <?php
-                    try {
-                        $bdd = new PDO('mysql:host=localhost;dbname=jean-forteroche;charset=utf8', 'root', 'root');
-                    } catch (Exception $e) {
-                        die('Erreur : ' . $e->getMessage());
-                    }
-                    $reponse = $bdd->query('SELECT title, content FROM billets WHERE id=2');
-                    while ($donnees = $reponse->fetch()) {
-                        echo $donnees['title']  . '<br />' .  $donnees['content'];
-                    }
-                    $reponse->closeCursor();
-                    ?>
-                    <a class="title" href="article1.php">Lire la suite&hellip;</a>
+            } // Fin de la boucle des billets
+            $req->closeCursor();
+                ?>
                 </div>
-                <p><a href="article2.php" class="button">Lire l'article</a></p>
-            </div>
         </div>
     </section>
     <!--/Section content end-->
 
     <!-- /footer -->
-    <footer>
-        <div class="heading_description">
-            <p>Jean Forteroche - 25 rue d'Hauteville - 75010 Paris - Tél. 01 02 03 04 05</p>
-            <p>Information importante : Le blog de Jean Forteroche est fictif. Il a été réalisé dans le cadre d’une formation OpenClassrooms.</p>
-        </div>
-    </footer>
+    <?php
+    require('footer.php');
+    ?>
     <!--/footer end-->
 
 </body>
