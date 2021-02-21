@@ -1,22 +1,10 @@
-<!DOCTYPE html>
 
-<html lang="fr">
+<?php $title = 'Jean Forteroche, billet'; ?>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/4f98587330.js" crossorigin="anonymous"></script>
-    <title>Jean Forteroche, le blog</title>
-</head>
+<?php require('../modules/header.php'); ?>
 
-<body>
-    <!--/Header -->
-    <header>
-    </header>
-    <!--/Header end-->
+<?php ob_start(); ?>
 
-    <!--/Section introduction-->
     <section id="introduction_administration">
         <div class="heading_description">
             <?php
@@ -29,11 +17,14 @@
                 </ul>
                 </div>';
             } else {
-                echo '<h2>Mauvais identifiant ou mot de passe !</h2>
-                <p><a href="login.php" class="login_button">Retour page login</a></p>';
+                require('../modules/login_error.php');
             }
             ?>
     </section>
     <!--/Section introduction end -->
-</body>
-</html>
+
+    <?php $content = ob_get_clean(); ?>
+
+    <?php require('../templates/template.php'); ?>
+
+    <?php require('../modules/footer.php'); ?>
