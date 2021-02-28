@@ -1,8 +1,6 @@
 
 <?php $title = 'Jean Forteroche, billet'; ?>
 
-<?php require('../modules/header.php'); ?>
-
 <?php ob_start(); ?>
 
     <section id="introduction_administration">
@@ -25,6 +23,4 @@
 
     <?php $content = ob_get_clean(); ?>
 
-    <?php require('../templates/template.php'); ?>
-
-    <?php require('../modules/footer.php'); ?>
+    <?php require('../templates/page.php'); ?>

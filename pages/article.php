@@ -1,9 +1,6 @@
-<?php $title = 'Jean Forteroche, billet'; ?>
-
-<?php require('../modules/header.php'); ?>
-
 <?php ob_start(); ?>
-<section id="introduction">
+
+<section id="introduction_administration">
     <div class="heading_description">
         <h2><a href="index.php">Retour à la liste des billets</a></h2>
 
@@ -37,25 +34,29 @@
         <li><a href="billet_supprimer.php" class="button">Supprimer</a></li>
 
         <h2>Commentaires</h2>
-
+        <?php $title = htmlspecialchars($donnees['title']); ?>
         <?php
         $req->closeCursor(); // Important : on libère le curseur pour la prochaine requête
 
         // Récupération des commentaires
-        $req = $bdd->prepare('SELECT author, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y \') AS date_comment_fr FROM comments WHERE id_billet = ? ORDER BY date_comment');
+        $req = $bdd->prepare('SELECT pseudo, comment, DATE_FORMAT(date_comment, \'%d/%m/%Y \') AS date_comment_fr FROM comments WHERE id_billet = ? ORDER BY date_comment');
         $req->execute(array($_GET['billet']));
 
         while ($donnees = $req->fetch()) {
         ?>
-            <p><strong><?php echo htmlspecialchars($donnees['author']); ?></strong> le <?php echo $donnees['date_comment_fr']; ?></p>
+            <p><strong><?php echo htmlspecialchars($donnees['pseudo']); ?></strong> le <?php echo $donnees['date_comment_fr']; ?></p>
             <p><?php echo nl2br(htmlspecialchars($donnees['comment'])); ?></p>
         <?php
+
         } // Fin de la boucle des commentaires
         $req->closeCursor();
         ?>
 
+        <?php require('comment.php'); ?>
+
         <?php $content = ob_get_clean(); ?>
 
-        <?php require('../templates/template.php'); ?>
+</section>
+<!--/Section introduction end -->
 
-        <?php require('../modules/footer.php'); ?>
+<?php require('../templates/page.php'); ?>

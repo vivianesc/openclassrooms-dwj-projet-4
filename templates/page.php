@@ -9,10 +9,14 @@
     <title><?= $title ?></title>
 </head>
 
+<?php require('../modules/header.php'); ?>
+
 <body>
 
     <?= $content ?>
 
 </body>
+
+<?php require('../modules/footer.php'); ?>
 
 </html>
