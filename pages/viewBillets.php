@@ -9,7 +9,6 @@
     </div>
 </section>
 
-<!--/Section content -->
 <section id="billets">
     <div class="heading_description">
         <h2>LES BILLETS</h2>
@@ -38,7 +37,6 @@
             </div>
     </div>
 </section>
-<!--/Section content end-->
 
 <?php $content = ob_get_clean(); ?>
 

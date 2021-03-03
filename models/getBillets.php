@@ -10,6 +10,3 @@ $req = $bdd->query('SELECT id, title, content, DATE_FORMAT(date_creation, \'%d/%
 
 return $req;
 }
-?>
-
-//require('index_billets_view.php');
