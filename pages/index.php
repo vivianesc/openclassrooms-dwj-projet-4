@@ -3,5 +3,4 @@ require('../models/getBillets.php');
 
 $req = getBillets();
 
-require('viewBillets.php');
-?>
+require('../views/indexView.php');

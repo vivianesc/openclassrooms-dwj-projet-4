@@ -1,17 +1,18 @@
-<?php ob_start(); ?>
+<?php
+require('../models/getBillet.php');
+//require('../models/getComments.php');
 
-<section id="introduction_administration">
-    <div class="heading_description">
-        <h2><a href="index.php">Retour à la liste des billets</a></h2>
+$req = getBillet($billetId);
 
-        <?php require('../models/getBillet.php'); ?>
+require('../views/billetView.php');
 
-        <?php require('../models/getComments.php'); ?>
 
-        <?php require('../modules/comment.php'); ?>
 
-        <?php $content = ob_get_clean(); ?>
-
-</section>
-
-<?php require('../templates/page.php'); ?>
+/* if (isset($_GET['id']) && $_GET['id'] > 0) {
+    $billet = getBillet($_GET['id']);
+//    $comments = getComments($_GET['id']);
+    require('../views/billetView.php');
+}
+else {
+    echo 'Erreur : aucun identifiant de billet envoyé';
+} */
