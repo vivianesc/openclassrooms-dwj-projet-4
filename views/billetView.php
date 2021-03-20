@@ -16,8 +16,8 @@
                 <?= nl2br(htmlspecialchars($billet['content'])) ?>
             </p>
         </div>
-        <li><a href="billet_editer.php" class="button">Éditer</a></li>
-        <li><a href="billet_supprimer.php" class="button">Supprimer</a></li>
+        <li><a href="../pages/delete.php?billet=<?php echo $billet['id']; ?>" class="button">Supprimer</a></li>
+        <li><a href="billet_supprimer.php" class="button">Éditer</a></li>
         <h2>Commentaires</h2>
 
         <?php
@@ -25,7 +25,7 @@
         ?>
             <?= htmlspecialchars($comment['pseudo']) ?>
             <em>le <?= $comment['date_comment_fr'] ?></em>
-            <p><?= (htmlspecialchars($comment['comment'])) ?></p>
+            <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
         <?php
         }
         ?>
