@@ -1,18 +1,10 @@
 <?php
 require('../models/getBillet.php');
-//require('../models/getComments.php');
 
-$req = getBillet($billetId);
-
-require('../views/billetView.php');
-
-
-
-/* if (isset($_GET['id']) && $_GET['id'] > 0) {
-    $billet = getBillet($_GET['id']);
-//    $comments = getComments($_GET['id']);
+if (isset($_GET['billet']) && $_GET['billet'] > 0) {
+    $billet = getBillet($_GET['billet']);
+    $comments = getComments($_GET['billet']);
     require('../views/billetView.php');
-}
-else {
+} else {
     echo 'Erreur : aucun identifiant de billet envoyé';
-} */
+}
