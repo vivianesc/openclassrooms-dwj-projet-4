@@ -14,6 +14,7 @@ function deleteBillet($billetId)
 function deleteComments($billetId)
 {
     $db = dbConnect();
-    $req = $db->query('DELETE FROM comments WHERE id_billet = ?');
+    $req = $db->query('DELETE FROM comments WHERE id_billet = ' . $billetId);
+
     return $req;
 }
