@@ -16,10 +16,14 @@
                 <?= nl2br(htmlspecialchars($billet['content'])) ?>
             </p>
         </div>
-        <li><a href="../pages/delete.php?billet=<?php echo $billet['id']; ?>" class="button">Supprimer</a></li>
-        <li><a href="billet_supprimer.php" class="button">Éditer</a></li>
+        <div class="cpanel">
+            <ul>
+                <li><a href="../pages/delete.php?billet=<?php echo $billet['id']; ?>" class="button">Supprimer</a></li>
+                <li><a href="billet_supprimer.php" class="button">Éditer</a></li>
+            </ul>
+        </div>
         <h2>Commentaires</h2>
-        <p><?php require('../modules/commentForm.php'); ?></p>
+
         <?php
         while ($comment = $comments->fetch()) {
         ?>
@@ -27,10 +31,10 @@
             <em>le <?= $comment['date_comment_fr'] ?></em>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
-
         <?php
         }
         ?>
+        <p><?php require('../modules/commentForm.php'); ?></p>
 </section>
 
 <?php $content = ob_get_clean(); ?>
