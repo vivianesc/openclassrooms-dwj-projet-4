@@ -1,4 +1,4 @@
-<form action="../pages/comment.php?billet=1" method="post">
+<form action="../pages/comment.php" method="post">
     <fieldset id="">
         <legend>AJOUTER UN COMMENTAIRE</legend>
         <p>
