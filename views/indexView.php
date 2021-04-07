@@ -18,23 +18,23 @@
         <?php
         while ($donnees = $req->fetch()) {
         ?>
-            <div class="listing-item">
-                <div class="excerpt">
-                    <?php echo htmlspecialchars($donnees['title']); ?>
-                    <em>le <?php echo $donnees['date_creation_fr']; ?></em>
-                    <a href="../pages/article.php?billet=<?php echo $donnees['id']; ?>">Lire le billet</a>
-                    <p>
-                        <?php
-                        // On affiche le contenu du billet
-                        echo nl2br(htmlspecialchars($donnees['content']));
-                        ?>
-                    </p>
-                </div>
-            <?php
+            <div class="excerpt">
+                <h3><?php echo htmlspecialchars($donnees['title']); ?></h3>
+                <em>le <?php echo $donnees['date_creation_fr']; ?></em>
+                <a class="button_article" href="../pages/article.php?billet=<?php echo $donnees['id']; ?> ">Lire le billet</a>
+                <p>
+                    <?php
+                    // On affiche le contenu du billet
+                    echo nl2br(htmlspecialchars($donnees['content']));
+                    ?>
+                </p>
+
+            </div>
+        <?php
         } // Fin de la boucle des billets
         $req->closeCursor();
-            ?>
-            </div>
+        ?>
+
     </div>
 </section>
 
