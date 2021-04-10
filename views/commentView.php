@@ -4,9 +4,8 @@
 
 <section id="introduction_administration">
     <div class="heading_description">
-        <h2>Votre commentaire a été ajouté</h2>
+        <h2>Votre post a été ajouté</h2>
         <h3><a href="../pages/index.php">Retour à la liste des billets</a></h3>
-
     </div>
 
 </section>
