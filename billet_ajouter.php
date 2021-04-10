@@ -18,7 +18,7 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 // Récupération du contenu
-$reponse = $bdd->query('SELECT title, content FROM billets ORDER BY ID DESC LIMIT 0, 10');
+$reponse = $bdd->query('SELECT title, content FROM billets ORDER BY ID DESC LIMIT 0, 1');
 
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $reponse->fetch())
