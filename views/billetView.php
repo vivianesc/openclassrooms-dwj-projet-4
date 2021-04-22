@@ -9,14 +9,12 @@
         <h3><a href="../pages/index.php">Retour à la liste des billets</a></h3>
     </div>
     <div class="news">
-        <p>
-            <?= nl2br(htmlspecialchars($billet['content'])) ?>
-        </p>
+        <p><?= htmlspecialchars($billet['content']) ?></p>
     </div>
     <div class="cpanel">
         <ul>
             <li><a href="../pages/delete.php?billet=<?php echo $billet['id']; ?>" class="button">Supprimer</a></li>
-            <li><a href="billet_supprimer.php" class="button">Éditer</a></li>
+            <li><a href="../views/billetEditView.php?billet=<?php echo $billet['id']?>&title=<?php echo $billet['title']?>&content=<?php echo $billet['content']?>"class="button">Éditer</a></li>
         </ul>
 
         <div class="comments">

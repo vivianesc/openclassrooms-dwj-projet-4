@@ -1,5 +1,5 @@
 <?php
-require('../models/createBillet.php');
+require('../models/billet.php');
 require('../views/createBilletView.php');
 
 if (isset($_POST['title']) && isset($_POST['content'])) {

@@ -1,5 +1,5 @@
 <?php
-require('../models/postComment.php');
+require('../models/comment.php');
 
 if (isset($_GET['billet']) && $_GET['billet'] > 0) {
   $comment = postComment($_GET['billet'], $_POST['pseudo'], $_POST['comment']);
