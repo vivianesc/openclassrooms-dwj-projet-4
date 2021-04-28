@@ -17,8 +17,6 @@ function getComments($billetId)
     return $req;
 }
 
-require('dbConnect.php');
-
 function postComment($billetId, $pseudo, $comment)
 {
     $db = dbConnect();
