@@ -6,7 +6,7 @@
             <ul>
                 <li><a href="../pages/index.php">Les billets</a></li>
                 <li><a href="../pages/auteur.php">L'auteur</a></li>
-                <li><a href="../views/loginView.php">Login</a></li>
+                <li><a href="../pages/administration.php">Login</a></li>
             </ul>
         </nav>
     </header>
